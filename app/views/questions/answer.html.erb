@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Stupid Coaching</h1>
+
+  <%# display the question you ask your coach as well as his answer. params[:question] %>
+  <%# answer is @answer %>
+  <div class="card">
+    <div class="question-card">
+      <p class="question"> <%= params[:question] %> </p>
+      <p class="author">- You</p>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="answer-card">
+      <p class="answer">
+        <%= @answer %>
+      </p>
+      <p class="author">
+        - Your Coach
+      </p>
+    </div>
+  </div>
+
+  <%= link_to "Ask a new question", ask_path %>
+</div>
